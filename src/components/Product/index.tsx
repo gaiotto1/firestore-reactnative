@@ -26,6 +26,13 @@ export function Product({ data }: Props) {
     });
   }
 
+  function handleDelete () {
+    firestore()
+    .collection('products')
+    .doc(data.id) // selecionar o documento que vai ser deletado
+    .delete();
+  }
+
   return (
     <Container>
       <Info>
@@ -47,6 +54,7 @@ export function Product({ data }: Props) {
         <ButtonIcon
           icon="delete"
           color="alert"
+          onPress={handleDelete}
         />
       </Options>
     </Container>
