@@ -1,8 +1,0 @@
-{
-    "emulators": {
-        "firestore": {
-            "port": "8082",
-            "enabled": true
-        }
-    }
-}
